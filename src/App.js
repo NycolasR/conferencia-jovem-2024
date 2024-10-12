@@ -1,7 +1,13 @@
-import arteConferencia from "./assets/images/arte-conf.png";
+import { useEffect, useState } from "react";
+
+import arteTag from "./assets/images/art-tag.png";
+import arteNome from "./assets/images/art-nome.png";
+import arteGlobo from "./assets/images/art-globo.png";
+// import arteConferencia from "./assets/images/arte-conf.png";
 
 import "./App.css";
-import { useEffect, useState } from "react";
+
+const MAX_DOTS = 400;
 
 function App() {
   const [dots, setDots] = useState([]);
@@ -11,21 +17,67 @@ function App() {
       // Gera um ângulo aleatório entre 0 e 2π radianos
       const angle = Math.random() * 2 * Math.PI;
 
-      // Calcula a posição x e y usando a trigonometria
-      const x = Math.cos(angle) * 800; // Distância da origem
-      const y = Math.sin(angle) * 800;
+      // Calcula a posição x e y usando a trigonometria e uma distância aleatória
+      const x = Math.cos(angle) * Math.random() * 900; // Distância aleatória da origem
+      const y = Math.sin(angle) * Math.random() * 900;
 
-      setDots((prevDots) => [...prevDots, { id: Math.random(), x, y }]);
-    }, 50); // Intervalo entre os pontos emitidos
+      setDots((prevDots) => {
+        // Mantém o número de pontos até o máximo definido
+        if (prevDots.length >= MAX_DOTS) {
+          return [...prevDots.slice(1), { id: Math.random(), x, y }];
+        }
+        return [...prevDots, { id: Math.random(), x, y }];
+      });
+    }, 500); // Intervalo entre os pontos emitidos
 
     return () => clearInterval(interval);
   }, []);
 
   return (
     <div className="container">
-      <div id="foto">
-        <img src={arteConferencia} alt="arteConferencia" />
+      <div className="foto">
+        <img src={arteGlobo} alt="arteGlobo" />
       </div>
+      <div className="foto-sem-rotacionar">
+        <img
+          src={arteNome}
+          alt="arteNome"
+          style={{ width: "310px", height: "auto" }}
+        />
+      </div>
+
+      <div className="foto-tag foto-tag1">
+        <img
+          src={arteTag}
+          alt="arteTag"
+          style={{ width: "900px", height: "auto" }}
+        />
+      </div>
+
+      <div className="foto-tag foto-tag2">
+        <img
+          src={arteTag}
+          alt="arteTag"
+          style={{ width: "900px", height: "auto" }}
+        />
+      </div>
+
+      <div className="foto-tag foto-tag3">
+        <img
+          src={arteTag}
+          alt="arteTag"
+          style={{ width: "900px", height: "auto" }}
+        />
+      </div>
+
+      <div className="foto-tag foto-tag4">
+        <img
+          src={arteTag}
+          alt="arteTag"
+          style={{ width: "900px", height: "auto" }}
+        />
+      </div>
+
       <div className="dot-emitter">
         {dots.map((dot) => (
           <div
@@ -39,7 +91,6 @@ function App() {
             }}
           />
         ))}
-        {/* Aqui você pode colocar um ponto invisível, se desejar */}
         <div className="dot" style={{ opacity: 0 }} />
       </div>
       <div className="dot-emitter">
@@ -55,7 +106,6 @@ function App() {
             }}
           />
         ))}
-        {/* Aqui você pode colocar um ponto invisível, se desejar */}
         <div className="dot" style={{ opacity: 0 }} />
       </div>
     </div>
