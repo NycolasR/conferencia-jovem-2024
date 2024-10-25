@@ -43,33 +43,33 @@ audio {
 }
 
 .foto-tag1 {
-  --rotate-angle: -10deg;
+  --rotate-angle: -16deg;
   top: 30px;
-  left: -30px;
+  left: -50px;
   transform: rotate(var(--rotate-angle));
-  animation: moveLeftRightInclinado 5s infinite ease-in-out;
+  animation: moveLeftRightInclinado 3s infinite ease-in-out;
 }
 
 .foto-tag2 {
-  --rotate-angle: -10deg;
-  top: 700px;
-  left: 550px;
+  --rotate-angle: -28deg;
+  top: 707px;
+  left: 1200px;
   transform: rotate(var(--rotate-angle));
   animation: moveLeftRightInclinado 5s infinite ease-in-out;
 }
 
 .foto-tag3 {
-  --rotate-angle: 15deg;
-  top: 700px;
-  left: -150px;
+  --rotate-angle: -19deg;
+  top: 763px;
+  left: 1053px;
   transform: rotate(var(--rotate-angle));
-  animation: moveLeftRightInclinado 5s infinite ease-in-out;
+  animation: moveLeftRightInclinado 3s infinite ease-in-out;
 }
 
 .foto-tag4 {
-  --rotate-angle: 15deg;
-  top: 30px;
-  left: 550px;
+  --rotate-angle: -15deg;
+  top: 85px;
+  left: -55px;
   transform: rotate(var(--rotate-angle));
   animation: moveLeftRightInclinado 5s infinite ease-in-out;
 }

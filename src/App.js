@@ -45,7 +45,6 @@ function App() {
           style={{ width: "310px", height: "auto" }}
         />
       </div>
-
       <div className="foto-tag foto-tag1">
         <img
           src={arteTag}
@@ -53,7 +52,6 @@ function App() {
           style={{ width: "900px", height: "auto" }}
         />
       </div>
-
       <div className="foto-tag foto-tag2">
         <img
           src={arteTag}
@@ -61,7 +59,6 @@ function App() {
           style={{ width: "900px", height: "auto" }}
         />
       </div>
-
       <div className="foto-tag foto-tag3">
         <img
           src={arteTag}
@@ -69,7 +66,6 @@ function App() {
           style={{ width: "900px", height: "auto" }}
         />
       </div>
-
       <div className="foto-tag foto-tag4">
         <img
           src={arteTag}
@@ -77,7 +73,6 @@ function App() {
           style={{ width: "900px", height: "auto" }}
         />
       </div>
-
       <div className="dot-emitter">
         {dots.map((dot) => (
           <div
