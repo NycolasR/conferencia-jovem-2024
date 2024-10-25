@@ -5,12 +5,9 @@
     "static/media/art-globo.png": "/conferencia-jovem-2024/static/media/art-globo.85a0a217d9ddd3947211.png",
     "static/media/art-nome.png": "/conferencia-jovem-2024/static/media/art-nome.6788c7ecab2ab663e748.png",
     "static/media/art-tag.png": "/conferencia-jovem-2024/static/media/art-tag.7625d7d697c220d609b4.png",
-    "index.html": "/conferencia-jovem-2024/index.html",
+    "index.html": "/conferencia-jovem-2024/public/index.html",
     "main.54ba8421.css.map": "/conferencia-jovem-2024/static/css/main.54ba8421.css.map",
     "main.c6c4ece1.js.map": "/conferencia-jovem-2024/static/js/main.c6c4ece1.js.map"
   },
-  "entrypoints": [
-    "static/css/main.54ba8421.css",
-    "static/js/main.c6c4ece1.js"
-  ]
+  "entrypoints": ["static/css/main.54ba8421.css", "static/js/main.c6c4ece1.js"]
 }
